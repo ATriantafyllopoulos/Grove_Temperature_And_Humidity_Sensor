@@ -22,6 +22,8 @@
 
 DHT dht(DHTPIN, DHTTYPE);
 
+#define SERIAL Serial
+
 #if defined(ARDUINO_ARCH_AVR)
     #define debug  Serial
 
