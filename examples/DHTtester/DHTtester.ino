@@ -8,7 +8,7 @@
 // Uncomment whatever type you're using!
 //#define DHTTYPE DHT11   // DHT 11
 #define DHTTYPE DHT22   // DHT 22  (AM2302)
-//#define DHTTYPE DHT21   // DHT 21 (AM2301)
+// #define DHTTYPE DHT21   // DHT 21 (AM2301)
 
 /*Notice: The DHT10 is different from other DHT* sensor ,it uses i2c interface rather than one wire*/
 /*So it doesn't require a pin.*/
@@ -53,8 +53,8 @@ void loop() {
 
 
     if (!dht.readTempAndHumidity(temp_hum_val)) {
-        SERIAL.print("Humidity: ");
-        SERIAL.print(temp_hum_val[0]);
+        // SERIAL.print("Humidity: ");
+        // SERIAL.print(temp_hum_val[0]);
         SERIAL.print(" %\t");
         SERIAL.print("Temperature: ");
         SERIAL.print(temp_hum_val[1]);
