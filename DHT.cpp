@@ -7,6 +7,7 @@
 #include <math.h>
 #include "DHT.h"
 //#define NAN 0
+#define DEBUG
 #ifdef DEBUG
     #define DEBUG_PRINT(...)  Serial.println(__VA_ARGS__)
 #else
@@ -66,9 +67,10 @@ int DHT::readTempAndHumidity(float* data) {
         data[1] = target_val[1] * 200.0 / 1024 / 1024 - 50;
 
     } else {
-        data[0] = readHumidity();
+        // data[0] = readHumidity();
         data[1] = readTemperature();
-        if (isnan(data[0]) || isnan(data[1])) {
+        // if (isnan(data[0]) || isnan(data[1])) {
+        if (isnan(data[1])){
             return -1;
         }
     }
